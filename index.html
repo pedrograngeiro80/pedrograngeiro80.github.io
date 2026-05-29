@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descubra os melhores pontos turísticos de São José do Rio Preto com informações detalhadas e curiosidades sobre a cidade.">
+    <meta name="keywords" content="turismo, São José do Rio Preto, pontos turísticos, viagem">
+    <meta name="author" content="Turismo Rio Preto">
+    <title>Pontos Turísticos de São José do Rio Preto - Guia Completo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --primary-light: #3b82f6;
+            --secondary: #10b981;
+            --accent: #f59e0b;
+            --background: #ffffff;
+            --surface: #f8fafc;
+            --text-primary: #0f172a;
+            --text-secondary: #64748b;
+            --border: #e2e8f0;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-primary);
+            background-color: var(--background);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 800;
+            letter-spacing: -0.3px;
+            line-height: 1.2;
+        }
+
+        /* ===== HEADER & NAVEGAÇÃO ===== */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--shadow);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: opacity 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        nav a:hover {
+            opacity: 0.8;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.75) 0%, rgba(29, 78, 216, 0.75) 100%),
+                        url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+            color: white;
+            padding: 8rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at bottom, rgba(37, 99, 235, 0.2) 0%, rgba(29, 78, 216, 0.4) 100%);
+            z-index: 1;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            animation: slideInDown 0.8s ease;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            text-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+            animation: slideInUp 0.8s ease 0.2s both;
+            font-weight: 500;
+        }
+
+        @keyframes slideInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: slideInUp 0.8s ease 0.4s both;
+        }
+
+        .btn {
+            padding: 0.75rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background-color: white;
+            color: var(--primary);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        /* ===== CONTAINER PRINCIPAL ===== */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* ===== SEÇÃO DE CURIOSIDADES ===== */
+        .curiosidades {
+            padding: 4rem 0;
+            background-color: var(--surface);
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+            font-weight: 800;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+            font-weight: 500;
+        }
+
+        .curiosidades-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .curiosidade-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            border-left: 4px solid var(--primary);
+        }
+
+        .curiosidade-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .curiosidade-card h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .curiosidade-card p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            font-weight: 500;
+        }
+
+        /* ===== SEÇÃO DE PONTOS TURÍSTICOS ===== */
+        .atracoes {
+            padding: 4rem 0;
+        }
+
+        .filtros {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .filtro-btn {
+            padding: 0.5rem 1.5rem;
+            border: 2px solid var(--border);
+            background: white;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            color: var(--text-secondary);
+        }
+
+        .filtro-btn.ativo {
+            background-color: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .filtro-btn:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        .atracoes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .atracao-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 1px solid var(--border);
+        }
+
+        .atracao-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .atracao-imagem {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, var(--primary-light) 0%, var(--secondary) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .atracao-imagem img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .atracao-categoria {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .atracao-conteudo {
+            padding: 1.5rem;
+        }
+
+        .atracao-conteudo h3 {
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .atracao-descricao {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+            font-weight: 500;
+        }
+
+        .atracao-info {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .atracao-info span {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .rating {
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        .btn-saiba-mais {
+            background-color: var(--primary);
+            color: white;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .btn-saiba-mais:hover {
+            background-color: var(--primary-dark);
+        }
+
+        /* ===== MODAL DE DETALHES ===== */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .modal.ativo {
+            display: flex;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .modal-conteudo {
+            background: white;
+            border-radius: 12px;
+            max-width: 600px;
+            width: 100%;
+            max-height: 80vh;
+            overflow-y: auto;
+            animation: slideUp 0.3s ease;
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .modal-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-header h2 {
+            margin: 0;
+            font-weight: 800;
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .modal-close:hover {
+            transform: rotate(90deg);
+        }
+
+        .modal-body {
+            padding: 2rem;
+        }
+
+        .modal-body h3 {
+            color: var(--primary);
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .modal-body p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: linear-gradient(135deg, var(--text-primary) 0%, #1e293b 100%);
+            color: white;
+            padding: 3rem 0 1rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+            display: block;
+            transition: color 0.3s ease;
+            font-weight: 500;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav {
+                display: none;
+                gap: 1rem;
+                flex-direction: column;
+                width: 100%;
+            }
+
+            nav.ativo {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero {
+                padding: 4rem 2rem;
+                min-height: 400px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+
+        /* ===== ANIMAÇÕES ===== */
+        @keyframes slideInUpAnim {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: slideInUpAnim 0.6s ease forwards;
+        }
+
+        .delay-1 {
+            animation-delay: 0.1s;
+        }
+
+        .delay-2 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-3 {
+            animation-delay: 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="header-container">
+            <div class="logo">🗺️ Turismo Rio Preto</div>
+            <button class="mobile-menu-btn" id="menuBtn">☰</button>
+            <nav id="nav">
+                <a href="#inicio">Início</a>
+                <a href="#curiosidades">Curiosidades</a>
+                <a href="#atracoes">Atrações</a>
+                <a href="#contato">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO SECTION COM IMAGEM -->
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <h1>Descubra São José do Rio Preto</h1>
+            <p>Explore a Capital dos Grandes Lagos com suas maravilhas naturais, rica herança cultural e dinamismo incomparável</p>
+            <div class="cta-buttons">
+                <button class="btn btn-primary" onclick="document.getElementById('atracoes').scrollIntoView({behavior: 'smooth'})">Explorar Atrações</button>
+                <button class="btn btn-secondary" onclick="document.getElementById('curiosidades').scrollIntoView({behavior: 'smooth'})">Saiba Mais</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CURIOSIDADES -->
+    <section class="curiosidades" id="curiosidades">
+        <div class="container">
+            <h2 class="section-title">Curiosidades sobre Rio Preto</h2>
+            <p class="section-subtitle">Conheça fatos fascinantes sobre a cidade</p>
+            
+            <div class="curiosidades-grid">
+                <div class="curiosidade-card fade-in delay-1">
+                    <h3>🏆 Qualidade de Vida</h3>
+                    <p>São José do Rio Preto ocupa a 1ª posição entre os municípios de São Paulo com a melhor qualidade de vida, segundo o Índice FIRJAN de Desenvolvimento Municipal (IFDM).</p>
+                </div>
+
+                <div class="curiosidade-card fade-in delay-2">
+                    <h3>💧 Capital dos Grandes Lagos</h3>
+                    <p>A cidade é conhecida como a Capital dos Grandes Lagos por sua abundância de represas e recursos hídricos, com o Parque da Represa Municipal como principal cartão-postal.</p>
+                </div>
+
+                <div class="curiosidade-card fade-in delay-3">
+                    <h3>🚂 Trem Caipira Histórico</h3>
+                    <p>A Estação Ferroviária de Rio Preto foi construída em 1912 e é um marco histórico. O Trem Caipira oferece passeios nostálgicos pelo interior paulista todos os últimos sábados do mês.</p>
+                </div>
+
+                <div class="curiosidade-card fade-in delay-1">
+                    <h3>🎭 Festival FIT Rio Preto</h3>
+                    <p>O Festival Internacional de Teatro (FIT) é um dos maiores eventos de teatro do Brasil, com 54 anos de história e 21 anos de edição internacional, realizado anualmente em julho.</p>
+                </div>
+
+                <div class="curiosidade-card fade-in delay-2">
+                    <h3>🦁 Zoológico Municipal</h3>
+                    <p>Fundado em 1973, o Zoológico Municipal abriga mais de 300 animais de 83 espécies diferentes, cercado por mata nativa e recebendo cerca de 200 mil visitantes por ano.</p>
+                </div>
+
+                <div class="curiosidade-card fade-in delay-3">
+                    <h3>🎨 Arte Primitiva</h3>
+                    <p>O Museu de Arte Primitiva José Antônio da Silva reúne 67 telas do artista naïf, representando todas as fases de sua obra e celebrando a arte popular brasileira.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PONTOS TURÍSTICOS -->
+    <section class="atracoes" id="atracoes">
+        <div class="container">
+            <h2 class="section-title">Principais Pontos Turísticos</h2>
+            <p class="section-subtitle">Conheça as atrações imperdíveis da cidade</p>
+
+            <div class="filtros">
+                <button class="filtro-btn ativo" data-filtro="todos">Todos</button>
+                <button class="filtro-btn" data-filtro="natureza">Natureza</button>
+                <button class="filtro-btn" data-filtro="cultura">Cultura</button>
+                <button class="filtro-btn" data-filtro="familia">Família</button>
+                <button class="filtro-btn" data-filtro="compras">Compras</button>
+            </div>
+
+            <div class="atracoes-grid" id="atracoes-grid">
+                <!-- Cards serão preenchidos por JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- MODAL DE DETALHES -->
+    <div class="modal" id="modal">
+        <div class="modal-conteudo">
+            <div class="modal-header">
+                <h2 id="modal-titulo"></h2>
+                <button class="modal-close" onclick="fecharModal()">✕</button>
+            </div>
+            <div class="modal-body" id="modal-corpo">
+                <!-- Conteúdo será preenchido por JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer id="contato">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Sobre Rio Preto</h4>
+                    <p>São José do Rio Preto é uma das principais cidades do interior de São Paulo, conhecida por sua qualidade de vida, infraestrutura moderna e riqueza cultural.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Úteis</h4>
+                    <a href="https://www.riopreto.sp.gov.br/" target="_blank">Site Oficial da Prefeitura</a>
+                    <a href="https://visiteriopreto.com.br/" target="_blank">Portal de Turismo</a>
+                    <a href="https://eventos.riopreto.sp.gov.br/" target="_blank">Calendário de Eventos</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <p>Rua Silva Jardim, 3099 - Centro</p>
+                    <p>Telefone: (17) 99742-0776</p>
+                    <p>Email: turismo@riopreto.sp.gov.br</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 São José do Rio Preto. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ===== DADOS DAS ATRAÇÕES =====
+        const atracoes = [
+            {
+                id: 1,
+                nome: 'Parque da Represa Municipal',
+                categoria: 'natureza',
+                descricao: 'O principal cartão-postal da cidade com pista de caminhada, fonte luminosa e vista deslumbrante.',
+                detalhes: 'Inaugurado em 1955, o Parque da Represa Municipal é o coração verde de Rio Preto. Com uma pista de caminhada de 2,7 km, equipamentos de ginástica e quiosques, é perfeito para famílias. A fonte luminosa musical é a segunda maior do Brasil, com jatos de água que alcançam 15 metros de altura. Abriga mais de 120 capivaras e diversas espécies de animais silvestres.',
+                horario: 'Aberto 24 horas',
+                entrada: 'Gratuito',
+                rating: 4.8,
+                emoji: '🌳'
+            },
+            {
+                id: 2,
+                nome: 'Zoológico Municipal',
+                categoria: 'familia',
+                descricao: 'Um verdadeiro santuário com mais de 300 animais e 83 espécies diferentes.',
+                detalhes: 'Fundado em 1973, o Zoológico Municipal é um dos espaços públicos mais visitados, com cerca de 200 mil visitantes por ano. Cercado por mata nativa, abriga animais fascinantes como onça-pintada, lobo-guará, leão e tigre. Possui clínica especializada e Centro de Educação Ambiental.',
+                horario: 'Terça a Domingo, 09:00 às 17:00',
+                entrada: 'Gratuito',
+                rating: 4.6,
+                emoji: '🦁'
+            },
+            {
+                id: 3,
+                nome: 'Trem Caipira',
+                categoria: 'cultura',
+                descricao: 'Uma viagem nostálgica de VLT resgata a história ferroviária e tradições rurais.',
+                detalhes: 'O Trem Caipira oferece um passeio histórico de 45 minutos pela Estação Ferroviária (construída em 1912) até o distrito de Engenheiro Schmitt, conhecido como polo de doces artesanais. Acompanhado por guias turísticos que narram a história do café e da ferrovia, com apresentações de música caipira.',
+                horario: 'Último sábado de cada mês',
+                entrada: 'Gratuito (agendamento obrigatório)',
+                rating: 4.7,
+                emoji: '🚂'
+            },
+            {
+                id: 4,
+                nome: 'Mercado Municipal',
+                categoria: 'compras',
+                descricao: 'O coração gastronômico com produtos típicos, queijos, embutidos e o famoso pastel.',
+                detalhes: 'Inaugurado em 1944, o Mercado Municipal é um patrimônio histórico tombado. Com sua arquitetura icônica de tijolos aparentes, oferece uma variedade de queijos, embutidos, temperos, frutas frescas, doces artesanais e o lendário pastel frito na hora.',
+                horario: 'Segunda a Sexta 07:00-18:00, Sábado 07:00-14:00',
+                entrada: 'Acesso livre',
+                rating: 4.5,
+                emoji: '🏪'
+            },
+            {
+                id: 5,
+                nome: 'Museu de Arte Primitiva',
+                categoria: 'cultura',
+                descricao: 'Acervo dedicado à genialidade da arte naïf brasileira de José Antônio da Silva.',
+                detalhes: 'Fundado em 1980, o museu abriga 67 telas a óleo do pintor naïf José Antônio da Silva (1909-1996), representando todas as suas fases pictóricas. Instalado no belo prédio histórico da antiga biblioteca municipal, exibe também esculturas, gravuras e livros autobiográficos.',
+                horario: 'Segunda a Sexta, 08:00 às 17:00',
+                entrada: 'Gratuito',
+                rating: 4.4,
+                emoji: '🎨'
+            },
+            {
+                id: 6,
+                nome: 'Catedral de São José',
+                categoria: 'cultura',
+                descricao: 'A imponente igreja-mãe da diocese, marco de fundação da cidade com belíssima arquitetura.',
+                detalhes: 'A Catedral de São José é o marco zero e coração espiritual de Rio Preto. Sua história remonta a 1852 quando uma pequena capela foi erguida em honra ao padroeiro. O templo atual possui proporções monumentais, vitrais artísticos importados e uma atmosfera de paz incomparável.',
+                horario: 'Diariamente, 07:00 às 19:00',
+                entrada: 'Gratuito',
+                rating: 4.6,
+                emoji: '⛪'
+            },
+            {
+                id: 7,
+                nome: 'Shopping Iguatemi',
+                categoria: 'compras',
+                descricao: 'Centro de compras premium com marcas internacionais, cinema e alta gastronomia.',
+                detalhes: 'O Shopping Iguatemi é a principal referência de compras e entretenimento de alto padrão. Oferece um mix de lojas de marcas consagradas, complexo de cinema de última geração, livraria, polo gastronômico com restaurantes renomados e intensa agenda de eventos culturais.',
+                horario: 'Segunda a Sábado 10:00-22:00, Domingo 14:00-20:00',
+                entrada: 'Acesso livre',
+                rating: 4.7,
+                emoji: '🛍️'
+            },
+            {
+                id: 8,
+                nome: 'Parque Cidade da Criança',
+                categoria: 'familia',
+                descricao: 'Parque recreativo com 50 mil m² e cerca de 180 brinquedos para crianças.',
+                detalhes: 'Com 36 anos de existência, o parque oferece uma experiência completa com tobogã, cama elástica, piscina de bolinha, trenzinho, tirolesa e muito mais. Perfeito para famílias passarem um dia divertido e seguro.',
+                horario: 'Terça a Domingo, 09:00 às 17:00',
+                entrada: 'Pago (valores acessíveis)',
+                rating: 4.5,
+                emoji: '🎡'
+            }
+        ];
+
+        // ===== FUNÇÃO PARA RENDERIZAR CARDS =====
+        function renderizarAtracoes(filtro = 'todos') {
+            const grid = document.getElementById('atracoes-grid');
+            grid.innerHTML = '';
+
+            const atracoesFiltradas = filtro === 'todos' 
+                ? atracoes 
+                : atracoes.filter(a => a.categoria === filtro);
+
+            atracoesFiltradas.forEach((atracao, index) => {
+                const card = document.createElement('div');
+                card.className = 'atracao-card fade-in';
+                card.style.animationDelay = `${index * 0.1}s`;
+                card.innerHTML = `
+                    <div class="atracao-imagem">
+                        <span style="font-size: 4rem;">${atracao.emoji}</span>
+                        <span class="atracao-categoria">${atracao.categoria}</span>
+                    </div>
+                    <div class="atracao-conteudo">
+                        <h3>${atracao.nome}</h3>
+                        <p class="atracao-descricao">${atracao.descricao}</p>
+                        <div class="atracao-info">
+                            <span>⏰ ${atracao.horario}</span>
+                            <span class="rating">⭐ ${atracao.rating}</span>
+                        </div>
+                        <button class="btn-saiba-mais" onclick="abrirModal(${atracao.id})">Saiba Mais</button>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // ===== FUNÇÃO PARA ABRIR MODAL =====
+        function abrirModal(id) {
+            const atracao = atracoes.find(a => a.id === id);
+            if (!atracao) return;
+
+            document.getElementById('modal-titulo').textContent = atracao.nome;
+            document.getElementById('modal-corpo').innerHTML = `
+                <h3>Sobre</h3>
+                <p>${atracao.detalhes}</p>
+                
+                <h3>Informações Práticas</h3>
+                <p><strong>Horário:</strong> ${atracao.horario}</p>
+                <p><strong>Entrada:</strong> ${atracao.entrada}</p>
+                <p><strong>Avaliação:</strong> ${'⭐'.repeat(Math.floor(atracao.rating))} (${atracao.rating})</p>
+                
+                <h3>Como Chegar</h3>
+                <p>São José do Rio Preto está localizada a 440 km de São Paulo, com fácil acesso via rodovia. Recomenda-se alugar um carro ou usar aplicativos de transporte para se deslocar pela cidade.</p>
+            `;
+            document.getElementById('modal').classList.add('ativo');
+        }
+
+        // ===== FUNÇÃO PARA FECHAR MODAL =====
+        function fecharModal() {
+            document.getElementById('modal').classList.remove('ativo');
+        }
+
+        // ===== FILTROS =====
+        document.querySelectorAll('.filtro-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.filtro-btn').forEach(b => b.classList.remove('ativo'));
+                this.classList.add('ativo');
+                renderizarAtracoes(this.dataset.filtro);
+            });
+        });
+
+        // ===== MENU MOBILE =====
+        document.getElementById('menuBtn').addEventListener('click', function() {
+            document.getElementById('nav').classList.toggle('ativo');
+        });
+
+        // ===== FECHAR MODAL AO CLICAR FORA =====
+        document.getElementById('modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                fecharModal();
+            }
+        });
+
+        // ===== INICIALIZAÇÃO =====
+        renderizarAtracoes();
+    </script>
+</body>
+</html>
